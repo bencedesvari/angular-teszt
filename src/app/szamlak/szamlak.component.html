@@ -23,12 +23,12 @@
   </button>
 </div>
 
-<ul class="heroes">
-  <li *ngFor="let hero of heroes">
+<ul class="szamlak">
+  <li *ngFor="let szamla of szamlak">
     <a routerLink="/detail/{{szamla.id}}">
       <span class="badge">{{szamla.id}}</span> {{szamla.nev}}
     </a>
-    <button class="delete" title="delete hero" (click)="delete(szamla)">
+    <button class="delete" title="delete szamla" (click)="delete(szamla)">
       x
     </button>
   </li>
