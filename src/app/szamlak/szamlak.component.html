@@ -1,38 +1,37 @@
 <h2>Számlák</h2>
-
+<h4>Adjon hozzá számlát a bal oldalon, majd jobb oldalon kiválasztva egészítse ki adatokkal azt.</h4>
 <div>
-  <label
-    >Név:
+	<div id="baloldal">
+		<label
+    >Név:<br>
     <input #szamlaNev />
-  </label>
-  <label
-    >Névérték:
-    <input #szamlaNevertek />
-  </label>
-  <label
-    >Pénznem:
-    <input #szamlaPenznem />
-  </label>
-  <label
-    >Státusz:
-    <input #szamlaStatusz />
-  </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(szamlaNev.value); szamlaNev.value=''">
-    add
-  </button>
-</div>
+  </label><br>
 
-<ul class="szamlak">
-  <li *ngFor="let szamla of szamlak">
-    <a routerLink="/detail/{{szamla.id}}">
-      <span class="badge">{{szamla.id}}</span> {{szamla.nev}}
-    </a>
-    <button class="delete" title="delete szamla" (click)="delete(szamla)">
+		<!-- (click) passes input value to add() and then clears the input -->
+		<button (click)="add(szamlaNev.value); szamlaNev.value=''">
+    hozzáadás
+  </button>
+		<button (click)="szamlaNev.value=''">
+    alaphelyzetbe
+  </button>
+	</div>
+	<div id="jobboldal">
+		<ul class="szamlak">
+			<li *ngFor="let szamla of szamlak">
+				<a routerLink="/detail/{{szamla.id}}">
+					<span class="badge">{{szamla.id}}</span> {{szamla.nev}}
+				</a>
+				<button class="delete" title="delete szamla" (click)="delete(szamla)">
       x
     </button>
-  </li>
-</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
