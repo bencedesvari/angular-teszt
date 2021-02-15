@@ -1,3 +1,1 @@
-# angular-jegumw
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-jegumw)
+# https://angular-teszt-benced.stackblitz.io/kezdolap
