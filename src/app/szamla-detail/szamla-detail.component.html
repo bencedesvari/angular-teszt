@@ -1,29 +1,29 @@
 <div *ngIf="szamla">
-  <h2>{{szamla.nev | uppercase}} Details</h2>
-  <div><span>id: </span>{{szamla.id}}</div>
-  <div>
-    <label
-      >Név::
+	<h2>{{szamla.nev | uppercase}} részletező</h2>
+	<div><span>Számla azonosítója: </span>{{szamla.id}}</div>
+	<div>
+		<label
+      >Név:<br>
       <input [(ngModel)]="szamla.nev" placeholder="nev" />
-    </label>
-    <label
-      >Névérték::
+    </label><br>
+		<label
+      >Névérték:<br>
       <input [(ngModel)]="szamla.nevertek" placeholder="nevertek" />
-    </label>
-    <label
-      >Pénznem::
+    </label><br>
+		<label
+      >Pénznem:<br>
       <input [(ngModel)]="szamla.penznem" placeholder="penznem" />
-    </label>
-    <label
-      >Statusz::
+    </label><br>
+		<label
+      >Statusz:<br>
       <input [(ngModel)]="szamla.statusz" placeholder="statusz" />
-    </label>
-  </div>
-  <button (click)="goBack()">go back</button>
-  <button (click)="save()">save</button>
-</div>
+    </label><br>
+	</div>
+		<button (click)="goBack()">go back</button>
+		<button (click)="save()">save</button>
+	</div>
 
-<!-- 
+	<!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at https://angular.io/license
