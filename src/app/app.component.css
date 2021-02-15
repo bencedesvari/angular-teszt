@@ -8,12 +8,14 @@ h1 {
 }
 nav {
   background-color: purple;
-  height: 100px;
+  height: 60px;
 }
 nav a {
+  display: inline;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-
-  display: inline-block;
 }
 nav a:visited,
 a:link {
